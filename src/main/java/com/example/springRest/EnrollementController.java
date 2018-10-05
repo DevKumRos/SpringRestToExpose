@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class EnrollementController {
 	
 	@RequestMapping(value="/enrollment/save", method=RequestMethod.POST)
-	public ResponseEntity<String> saveUser(@RequestBody User user){
+	public ResponseEntity<User> saveUser(@RequestBody User user){
 		System.out.println(user);
-		return new ResponseEntity<String>("Received Data Successfully", HttpStatus.OK);
+		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
 
 }
